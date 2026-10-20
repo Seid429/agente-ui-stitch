@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Iniciar sesión - Enterprise Portal</title>
+<!-- Inter font -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary-container": "#4069f2",
+            "on-primary-fixed-variant": "#3f465c",
+            "surface-container-low": "#f2f4f6",
+            "primary": "#000000",
+            "inverse-on-surface": "#eff1f3",
+            "error-container": "#ffdad6",
+            "tertiary-fixed": "#d8e3fb",
+            "on-primary": "#ffffff",
+            "primary-fixed-dim": "#bec6e0",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary": "#ffffff",
+            "secondary-fixed": "#dce1ff",
+            "on-tertiary": "#ffffff",
+            "on-surface-variant": "#45464d",
+            "on-tertiary-fixed-variant": "#3c475a",
+            "surface-container-high": "#e6e8ea",
+            "surface-container": "#eceef0",
+            "inverse-surface": "#2d3133",
+            "on-tertiary-container": "#79849a",
+            "primary-container": "#131b2e",
+            "on-error-container": "#93000a",
+            "surface-variant": "#e0e3e5",
+            "outline": "#76777d",
+            "background": "#f7f9fb",
+            "on-secondary-fixed-variant": "#0039b5",
+            "on-primary-container": "#7c839b",
+            "on-secondary-fixed": "#001551",
+            "inverse-primary": "#bec6e0",
+            "on-tertiary-fixed": "#111c2d",
+            "error": "#ba1a1a",
+            "on-background": "#191c1e",
+            "on-surface": "#191c1e",
+            "on-primary-fixed": "#131b2e",
+            "on-secondary-container": "#fffbff",
+            "tertiary-container": "#111c2d",
+            "surface-bright": "#f7f9fb",
+            "tertiary": "#000000",
+            "outline-variant": "#c6c6cd",
+            "on-error": "#ffffff",
+            "secondary-fixed-dim": "#b7c4ff",
+            "surface": "#f7f9fb",
+            "surface-tint": "#565e74",
+            "secondary": "#1d4ed8",
+            "surface-dim": "#d8dadc",
+            "tertiary-fixed-dim": "#bcc7de",
+            "primary-fixed": "#dae2fd"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter-mobile": "1rem",
+            "space-xs": "0.25rem",
+            "gutter": "1.5rem",
+            "space-sm": "0.5rem",
+            "margin": "2rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "margin-mobile": "1rem",
+            "space-xl": "2.5rem"
+          },
+          "fontFamily": {
+            "body-lg": ["Inter"],
+            "body-md": ["Inter"],
+            "headline-xl-mobile": ["Inter"],
+            "body-sm": ["Inter"],
+            "headline-xl": ["Inter"],
+            "label-md": ["Inter"],
+            "label-sm": ["Inter"],
+            "headline-lg": ["Inter"],
+            "label-lg": ["Inter"],
+            "headline-sm": ["Inter"]
+          },
+          "fontSize": {
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+            "label-md": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+    }
+    /* Subtle dot security mesh background */
+    .bg-tech-pattern {
+      background-color: #f7f9fb;
+      background-image: radial-gradient(#c6c6cd 0.75px, transparent 0.75px);
+      background-size: 24px 24px;
+    }
+    .auth-card-shadow {
+      box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+    }
+  </style>
+</head>
+<body class="bg-tech-pattern min-h-screen flex flex-col justify-between text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed antialiased">
+<!-- Top Navigation Anchor (Shared Component: TopNavBar - Linear/Auth state representation) -->
+<header class="w-full bg-surface/80 backdrop-blur-md border-b border-outline-variant/40 sticky top-0 z-30">
+<div class="flex justify-between items-center w-full px-6 md:px-8 py-3.5 max-w-7xl mx-auto">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[19px]" data-icon="shield">shield</span>
+</div>
+<span class="text-headline-sm font-headline-sm font-bold text-on-surface tracking-tight">Enterprise Portal</span>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden sm:inline-flex items-center gap-1.5 text-body-md font-body-md text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#documentation">
+<span class="material-symbols-outlined text-[18px]" data-icon="description">description</span>
+          Documentación
+        </a>
+<a class="inline-flex items-center gap-1.5 text-body-md font-body-md text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#support">
+<span class="material-symbols-outlined text-[18px]" data-icon="headset_mic">headset_mic</span>
+          Soporte
+        </a>
+</div>
+</div>
+</header>
+<!-- Central Authentication Canvas -->
+<main class="flex-1 flex items-center justify-center px-4 py-8 md:py-12">
+<div class="w-full max-w-[440px]">
+<!-- Environmental Security Badge -->
+<div class="flex items-center justify-center gap-2 mb-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-high border border-outline-variant/60 text-label-sm font-label-sm text-on-surface-variant tracking-wider">
+<span class="material-symbols-outlined text-[14px] text-secondary" data-icon="lock">lock</span>
+          CONEXIÓN CIFRADA TLS 1.3
+        </span>
+</div>
+<!-- Auth Card -->
+<div class="bg-surface-container-lowest border border-outline-variant/70 rounded-2xl auth-card-shadow p-6 sm:p-8">
+<!-- Header / Logo & Titles -->
+<div class="text-center mb-7">
+<div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-surface-container-low border border-outline-variant/50 text-secondary mb-3.5 shadow-sm">
+<span class="material-symbols-outlined text-[26px]" data-icon="verified_user">verified_user</span>
+</div>
+<h1 class="text-headline-lg font-headline-lg text-on-surface">Iniciar sesión</h1>
+<p class="text-body-md font-body-md text-on-surface-variant mt-1.5">Ingresa tus credenciales para acceder a tu cuenta</p>
+</div>
+<!-- Form Elements -->
+<form class="space-y-4" id="login-form" onsubmit="event.preventDefault();">
+<!-- Field: Email / User -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1.5" for="email">
+              Correo electrónico o usuario
+            </label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]" data-icon="mail">mail</span>
+</span>
+<input class="w-full h-11 pl-11 pr-3.5 rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface text-body-md font-body-md placeholder:text-outline focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/15 transition-all duration-150" id="email" name="email" placeholder="ejemplo@empresa.com" required="" type="text"/>
+</div>
+</div>
+<!-- Field: Password -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1.5" for="password">
+              Contraseña
+            </label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]" data-icon="key">key</span>
+</span>
+<input class="w-full h-11 pl-11 pr-11 rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface text-body-md font-body-md placeholder:text-outline focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/15 transition-all duration-150" id="password" name="password" placeholder="••••••••••••" required="" type="password"/>
+<button aria-label="Mostrar contraseña" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-outline hover:text-on-surface transition-colors cursor-pointer" id="toggle-password" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="visibility" id="eye-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Row: Remember me & Forgot Password -->
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center gap-2 cursor-pointer select-none">
+<input class="w-[18px] h-[18px] rounded border border-outline-variant text-primary-container focus:ring-secondary/20 focus:ring-offset-0 transition-colors cursor-pointer" id="remember" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface">Recordar sesión siempre</span>
+</label>
+<a class="text-body-sm font-body-sm text-secondary hover:underline focus:outline-none focus:ring-2 focus:ring-secondary/20 rounded" href="#recuperar">
+              ¿Olvidaste tu contraseña?
+            </a>
+</div>
+<!-- Main CTA Submit Button -->
+<div class="pt-2">
+<button class="w-full h-11 px-5 rounded-lg bg-primary-container hover:bg-slate-800 active:bg-primary text-on-primary text-label-lg font-label-lg flex items-center justify-center gap-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 transition-all duration-150" type="submit">
+<span>Iniciar sesión</span>
+<span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</form>
+<!-- Single Sign-On (SSO) Section Divider -->
+<div class="relative my-6">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-outline-variant/60"></div>
+</div>
+<div class="relative flex justify-center text-xs">
+<span class="bg-surface-container-lowest px-2.5 text-body-sm font-body-sm text-outline">o accede con</span>
+</div>
+</div>
+<!-- SSO Button -->
+<button class="w-full h-10 px-4 rounded-lg border border-outline-variant/80 bg-surface-container-lowest hover:bg-surface-container-low text-on-surface text-label-md font-label-md flex items-center justify-center gap-2.5 transition-all duration-150" type="button">
+<span class="material-symbols-outlined text-[19px] text-secondary" data-icon="domain">domain</span>
+<span>Continuar con SSO Corporativo</span>
+</button>
+<!-- Bottom Registration Prompt -->
+<div class="text-center mt-6 pt-5 border-t border-outline-variant/50">
+<p class="text-body-md font-body-md text-on-surface-variant">
+            ¿No tienes una cuenta? 
+            <a class="text-secondary font-semibold hover:underline focus:outline-none focus:ring-1 focus:ring-secondary rounded px-0.5 ml-1" href="#registro">
+              Registrarse
+            </a>
+</p>
+</div>
+</div>
+<!-- Trust Indicators below card -->
+<div class="flex items-center justify-center gap-5 mt-5 text-body-sm font-body-sm text-outline">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px]" data-icon="check_circle">check_circle</span>
+<span>SOC 2 Tipo II</span>
+</div>
+<div class="w-1 h-1 rounded-full bg-outline-variant"></div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px]" data-icon="security">security</span>
+<span>256-bit AES</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Anchor (Shared Component: Footer) -->
+<footer class="w-full bg-surface border-t border-outline-variant/50">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-8 py-4 max-w-7xl mx-auto gap-4">
+<p class="text-body-sm font-body-sm text-on-surface-variant text-center md:text-left">
+        © 2025 Enterprise Security Platform. Todos los derechos reservados. Conexión cifrada TLS 1.3.
+      </p>
+<div class="flex items-center gap-6">
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#privacidad">Privacidad</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#terminos">Términos de servicio</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#seguridad">Seguridad</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#contacto">Contacto</a>
+</div>
+</div>
+</footer>
+<!-- Password Visibility Toggle Interaction -->
+<script>
+    const passwordInput = document.getElementById('password');
+    const togglePasswordBtn = document.getElementById('toggle-password');
+    const eyeIcon = document.getElementById('eye-icon');
+
+    if (togglePasswordBtn && passwordInput && eyeIcon) {
+      togglePasswordBtn.addEventListener('click', () => {
+        const isPassword = passwordInput.type === 'password';
+        passwordInput.type = isPassword ? 'text' : 'password';
+        eyeIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+        eyeIcon.setAttribute('data-icon', isPassword ? 'visibility_off' : 'visibility');
+        togglePasswordBtn.setAttribute('aria-label', isPassword ? 'Ocultar contraseña' : 'Mostrar contraseña');
+      });
+    }
+  </script>
+</body></html>

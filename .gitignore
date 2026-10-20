@@ -1,0 +1,4 @@
+node_modules/
+.env
+# Contiene claves reales: no se sube
+.env.example
